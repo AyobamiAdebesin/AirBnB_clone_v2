@@ -5,20 +5,24 @@ from datetime import datetime
 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, DateTime, String
+from sqlalchemy import Text, MetaData, Table 
 
-Base = declarative_base()
+my_metadata = MetaData()
+Base = declarative_base(metadata=my_metadata)
 
 
 class BaseModel:
     """A base class for all hbnb models"""
     id = Column(String(60), primary_key=True, nullable=False)
-    created_at = Column(DateTime(timezone=False),
-                        nullable=False, default=datetime.utcnow())
-    updated_at = Column(DateTime(timezone=False),
-                        nullable=False, default=datetime.utcnow())
+    created_at = Column(
+        DateTime(timezone=False),
+        nullable=False, default=datetime.utcnow())
+    updated_at = Column(
+        DateTime(timezone=False),
+        nullable=False, default=datetime.utcnow())
 
     def __init__(self, *args, **kwargs):
-        """Instatntiates a new model"""
+        """Instantiates a new model"""
         if kwargs == {} and len(kwargs) == 0:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
