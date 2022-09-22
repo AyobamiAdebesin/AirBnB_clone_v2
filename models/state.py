@@ -17,7 +17,7 @@ class State(BaseModel, Base):
         name = ""
 
     def __init__(self, *args, **kwargs):
-        """Instatntiates a new model"""
+        """Instantiates a new model"""
         from models.city import City
         super().__init__(*args, **kwargs)
 
