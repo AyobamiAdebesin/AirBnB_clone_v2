@@ -25,7 +25,7 @@ class User(BaseModel, Base):
         last_name = ""
 
     def __init__(self, *args, **kwargs):
-        """Instatntiates a new model"""
+        """Instantiates a new model"""
         from models.place import Place
         from models.review import Review
         super().__init__(*args, **kwargs)
