@@ -11,7 +11,7 @@ env.user = "ubuntu"
 
 
 def do_deploy(archive_path):
-    """ Deploys """
+    """ Deploys archived project to the web server"""
     if not os.path.exists(archive_path):
         return False
     try:
