@@ -32,7 +32,7 @@ def c(text):
 
 
 @app.route("/python/<text>", strict_slashes=False)
-def display_python(text="so cool"):
+def python(text="so cool"):
     """
     Displays Python followed by the value of <text>
     The default value is "is cool"
