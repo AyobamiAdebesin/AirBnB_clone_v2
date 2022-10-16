@@ -8,7 +8,6 @@ Displays HBNB on route "/hbnb"
 """
 
 from flask import Flask
-from flask import escape0
 
 app = Flask(__name__)
 
@@ -26,9 +25,10 @@ def say_hbnb():
 
 
 @app.route('/c/<text>', strict_slashes=False)
-def display_c():
+def display_c(text):
     """ Returns a custom message """
-    return f"C {escape(text)}"
+    text = text.replace("_", " ") 
+    return f"C {text}"
 
 
 if __name__ == "__main__":
