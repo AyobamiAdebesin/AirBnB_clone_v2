@@ -27,6 +27,7 @@ def say_hbnb():
 
 @app.route('/c/<text>', strict_slashes=False)
 def display_c():
+    """ Returns a custom message """
     return f"C {escape(text}"
 
 
