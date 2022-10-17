@@ -5,9 +5,10 @@ folder of the AirBnB Clone repo
 """
 
 
-from fabric.api import local
-from datetime import datetime
 import os.path as file_path
+from datetime import datetime
+
+from fabric.api import local
 
 
 def do_pack():
