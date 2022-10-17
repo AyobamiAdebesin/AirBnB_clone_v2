@@ -7,8 +7,7 @@ Displays Hello HBNB on route "/"
 Displays HBNB on route "/hbnb"
 """
 
-from flask import Flask
-from flask import abort, render_template
+from flask import Flask, abort, render_template
 
 app = Flask(__name__)
 
