@@ -53,5 +53,6 @@ def number_template(n):
     """ Displays a HTML page if n is an integer """
     render_template("templates/5-number.html", name=n)
 
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
