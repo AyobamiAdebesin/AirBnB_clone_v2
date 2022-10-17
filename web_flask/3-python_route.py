@@ -41,6 +41,5 @@ def python(text="so cool"):
     return f"Python {text}"
 
 
-
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
