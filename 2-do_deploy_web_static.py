@@ -9,6 +9,7 @@ import os
 env.hosts = ['34.205.65.146', '54.237.35.160']
 env.user = "ubuntu"
 
+
 def do_deploy(archive_path):
     """Deploys the static files to the host servers.
     Args:
