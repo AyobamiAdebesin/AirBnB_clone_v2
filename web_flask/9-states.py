@@ -85,17 +85,21 @@ def cities_by_states():
 
 
 @app.route("/states", strict_slashes=False)
-def get_all_states():
-    my_db = storage.all(State)
-    return render_template("9-states.html", states=my_db)
+def states():
+    """Displays an HTML page with a list of all States.
+    States are sorted by name.
+    """
+    states = storage.all(State)
+    return render_template("9-states.html", state=states)
 
 
 @app.route("/states/<id>", strict_slashes=False)
-def get_state_by_id(id):
+def states_id(id):
+    """Displays an HTML page with info about <id>, if it exists."""
     for state in storage.all(State).values():
         if state.id == id:
-            return render_template("9-states.html", states=state)
-        return render_template("9-states.html")
+            return render_template("9-states.html", state=state)
+    return render_template("9-states.html")
 
 
 @app.teardown_appcontext
