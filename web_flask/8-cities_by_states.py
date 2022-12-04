@@ -74,6 +74,7 @@ def states_list():
         states.append(state)
     return render_template("7-states_list.html", states=states)
 
+
 @app.route("/cities_by_states", strict_slashes=False)
 def cities_by_states():
     """Displays an HTML page with a list of all states and related cities.
