@@ -8,7 +8,7 @@ Displays HBNB on route "/hbnb"
 """
 
 from flask import Flask, abort, render_template
-
+from models import State
 from models import storage
 
 app = Flask(__name__)
@@ -68,7 +68,7 @@ def states_list():
     Displays a HMTL page with the list of all State objects present
     in DBStorage sorted by name (A->Z)
     """
-    my_db = storage.all("State")
+    my_db = storage.all(State)
     states = []
     for state in my_db.values():
         states.append(state)
