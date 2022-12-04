@@ -7,8 +7,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, DateTime, String
 from sqlalchemy import Text, MetaData, Table 
 
-my_metadata = MetaData()
-Base = declarative_base(metadata=my_metadata)
+Base = declarative_base()
 
 
 class BaseModel:
